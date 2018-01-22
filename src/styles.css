@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    /* Margin bottom by footer height */
+    margin-bottom: 85px;
+    
+  }
+
+  .recommended{
+      background-color: green;
+      color:wheat;
+      position: relative;
+      bottom: 35px;
+      left:20px;
+      font-size: 15px;
+      transform: rotate(-45deg);
+      z-index: 2;
+  }
+
+  .recommended1{
+    background-color: green;
+    color:wheat;
+    text-align: center;
+    position: relative;
+      top: 5px;
+    
+
+}

@@ -1,0 +1,9 @@
+[{
+    "name":"Forum","timings":["10 PM","12 PM","5 PM","10 PM"],"price":250,"dates":["1 Feb","2 Feb","3 Feb","4 Feb","5 Feb"]
+},{
+    "name":"INOX","timings":["11 AM","2 PM","5 PM","10 PM"],"price":150,"dates":["11 Feb","12 Feb","13 Feb","14 Feb","15 Feb"]
+
+},{
+    "name":"MAX 3D","timings":["1 PM","4 PM","10 PM"],"price":200,"dates":["10 Feb","22 Feb","3 Feb","4 Feb","5 Feb"]
+
+}]

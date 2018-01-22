@@ -1,0 +1,53 @@
+<div class='container'>
+  
+    <div class='row'>
+      <div class='  col-md-5  '>
+      <div class='panel panel-default'>
+        <div class='panel-heading'>Booking Summary</div>
+        <div class='panel-body'>
+          <div *ngIf='theater; else mssg;'>
+              <div class='row'>You have selected the following details
+                </div>
+          <div class='row'>
+            <table>
+              <tr>
+                <th>Theater Name</th><td>: {{theater.name}}</td>
+              </tr>
+              <tr>
+                <th>Location</th><td>: {{theater.location}}</td>
+              </tr>
+              <tr>
+                <th>Seats Booked</th><td>: {{theater.seats}}</td>
+              </tr>
+              <tr>
+                <th>Movie Name</th><td>: {{theater.movieName}}</td>
+              </tr>
+              <tr>
+                <th>Price</th><td>: {{theater.price}}</td>
+              </tr>
+              <tr>
+                <th>Show Date</th><td>: {{theater.date}}</td>
+              </tr>
+              <tr>
+                <th>Show Timings</th><td>: {{theater.timing}}</td>
+              </tr>
+            </table>
+        </div>
+        <br>
+        <div class='row'>
+         
+               <button class='btn btn-primary mybtn mbbtn' (click)='modifybooking()'>Modify Booking</button>
+                <button class='btn btn-primary cbbtn' (click)='confirmbooking()'>Confirm Booking</button>
+          </div>
+        </div>
+        <ng-template #mssg>
+            <div class='row'>There are no bookings yet. Kindly proceed to main page for bookings.</div>
+            <br>
+            
+            <div class='row'><button class='btn btn-primary mybtn' (click)='booktickets()'>Book Tickets</button></div> 
+   
+          </ng-template>
+      </div>
+      </div>
+      </div>
+      </div>

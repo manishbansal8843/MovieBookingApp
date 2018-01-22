@@ -1,0 +1,20 @@
+.panel-body{
+    padding-left: 1cm;
+    padding-right: 1cm;
+}
+
+.img{
+    width: 80%;
+    object-fit: cover;
+}
+
+.container{
+    position: relative;
+    top: 5vw;
+    left: 5vw;
+}
+
+.panel > .panel-heading{
+    background-color: bisque;
+    color: rgb(197, 106, 106);
+}

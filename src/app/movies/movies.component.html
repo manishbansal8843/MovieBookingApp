@@ -1,0 +1,79 @@
+<div class='container movie-panel'>
+<div class='panel panel-default'>
+  <div class='panel-heading'>Movies now in Theaters</div>
+<div class='panel-body'>
+    <div *ngIf='!location'>Select location</div>
+    <div [hidden]='!location'>
+      <div class='container'>
+        <div class='form-group'>
+        <div class='row sortrow'>
+            <div class='col-sm-1'>
+                <label for='sortby' class='control-label'>Sort By</label>
+            
+           
+           </div>
+          <div class='col-sm-2 col-offset-8 pull-left '>
+            
+          <select [ngModel]='sortby' (change)='sortbymethod($event.target.value)' class='form-control' id='sortby'>
+              <option  value='select' disabled>Select</option>
+
+            <option value='popularity'>Popularity</option>
+            <option value='name'>Name</option>
+
+          </select>
+        
+        </div>
+        </div>
+        </div>
+        <div class='row' *ngFor='let mov of moviesFiltered; let i=index;' [hidden]='(i%4)>0'>
+          <div class='col-md-3' [appMovieBoxFocus] [appRecommended]='mov.rating'>
+            <div class='row'><div class='col-sm-12'><img [src]="mov.imageSrc" alt="Image missing"></div></div>
+            <div class='row'><div class='col-sm-12  text-strong'>{{mov.name}}</div></div>
+            <div class='row'><div class='col-sm-12'>{{mov.language}}</div></div>
+            <div class='row'><div class='col-sm-12'>{{mov.dim}}</div></div>
+            <div class='row'><div class='col-sm-12'><app-rating [rating]='mov.rating'></app-rating></div></div>
+            <div class='row'><div class='col-sm-12'><button class='btn btn-success'(click)='bookTicket(i)'>Book</button></div></div>
+
+
+
+          </div>
+          <div class='col-md-3' *ngIf='moviesFiltered[i+1]' [appMovieBoxFocus] [appRecommended]='moviesFiltered[i+1].rating'>
+              <div class='row'><div class='col-sm-12'><img [src]="moviesFiltered[i+1].imageSrc" alt="Image missing"></div></div>
+              <div class='row'><div class='col-sm-12  text-strong'>{{moviesFiltered[i+1].name}}</div></div>
+              <div class='row'><div class='col-sm-12'>{{moviesFiltered[i+1].language}}</div></div>
+              <div class='row'><div class='col-sm-12'>{{moviesFiltered[i+1].dim}}</div></div>
+              <div class='row'><div class='col-sm-12'><app-rating [rating]='moviesFiltered[i+1].rating'></app-rating></div></div>
+              <div class='row'><div class='col-sm-12'><button class='btn btn-success'(click)='bookTicket(i+1)'>Book</button></div></div>
+
+  
+  
+            </div>
+            <div class='col-md-3' *ngIf='moviesFiltered[i+2]' [appMovieBoxFocus] [appRecommended]='moviesFiltered[i+2].rating'>
+                <div class='row'><div class='col-sm-12'><img [src]="moviesFiltered[i+2].imageSrc" alt="Image missing"></div></div>
+                <div class='row'><div class='col-sm-12  text-strong'>{{moviesFiltered[i+2].name}}</div></div>
+                <div class='row'><div class='col-sm-12'>{{moviesFiltered[i+2].language}}</div></div>
+                <div class='row'><div class='col-sm-12'>{{moviesFiltered[i+2].dim}}</div></div>
+                <div class='row'><div class='col-sm-12'><app-rating [rating]='moviesFiltered[i+2].rating'></app-rating></div></div>
+                <div class='row'><div class='col-sm-12'><button class='btn btn-success'(click)='bookTicket(i+2)'>Book</button></div></div>
+
+    
+    
+              </div>
+              <div class='col-md-3' *ngIf='moviesFiltered[i+3]' [appMovieBoxFocus] [appRecommended]='moviesFiltered[i+3].rating'>
+                  <div class='row'><div class='col-sm-12'><img [src]="moviesFiltered[i+3].imageSrc" alt="Image missing"></div></div>
+                  <div class='row'><div class='col-sm-12 text-strong'>{{moviesFiltered[i+3].name}}</div></div>
+                  <div class='row'><div class='col-sm-12'>{{moviesFiltered[i+3].language}}</div></div>
+                  <div class='row'><div class='col-sm-12'>{{moviesFiltered[i+3].dim}}</div></div>
+                  <div class='row'><div class='col-sm-12'><app-rating [rating]='moviesFiltered[i+3].rating'></app-rating></div></div>
+                  <div class='row'><div class='col-sm-12'><button class='btn btn-success'(click)='bookTicket(i+3)'>Book</button></div></div>
+
+      
+      
+                </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+</div>
+</div>

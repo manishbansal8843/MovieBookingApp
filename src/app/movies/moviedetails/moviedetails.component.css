@@ -1,0 +1,26 @@
+.panel-body{
+    padding-left: 1cm;
+}
+
+.img{
+    width: 80%;
+    object-fit: cover;
+}
+
+.container{
+    position: relative;
+    top: 5vw;
+}
+
+.panel > .panel-heading{
+    background-color: bisque;
+    color: rgb(197, 106, 106);
+}
+.theaterlink:hover{
+    cursor: pointer;
+}
+.theaterForm{
+    margin: 0;
+    padding: 0;
+    padding-right: 15px;
+}

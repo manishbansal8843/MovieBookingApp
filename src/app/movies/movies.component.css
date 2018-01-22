@@ -1,0 +1,41 @@
+.movie-panel{
+    margin: auto;
+    width: 90%;
+    padding:150px 0;
+}
+
+.container > .row > .col-md-3 > .row {
+    
+    text-align: center;
+}
+
+
+img {
+    display: block;
+    
+    margin:auto;
+    width: 2.2in;
+    height: 3in;
+    object-fit: fill;
+}
+.container > .row > .col-md-3  {
+    display: block;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 10px 10px;  
+    width:22%;
+    height: 4.5in;
+}
+
+.text-strong{
+    font-weight: bold;
+}
+
+.sortrow{
+    padding: 10px 0;
+}
+.control-label{
+    padding: 5px 0;
+}

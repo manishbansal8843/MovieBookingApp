@@ -1,0 +1,15 @@
+[
+    {"name":"Bahuballi2","language":"Hindi","dim":"2D","rating":"5","imageSrc":"/assets/images/bahubali2.jpg","city":["chandigarh","bangalore","chennai"]},
+    {"name":"Chandi","language":"Telugu","dim":"2D","rating":"2","imageSrc":"/assets/images/chandi.jpg","city":["chennai"]},
+    {"name":"Indian","language":"Hindi","dim":"2D","rating":"2","imageSrc":"/assets/images/indian.jpg","city":["chandigarh"]},
+    {"name":"Wolf Town","language":"English","dim":"3D","rating":"4","imageSrc":"/assets/images/wolftown.jpg","city":["chandigarh","bangalore","chennai"]},
+
+    {"name":"Lagaan","language":"Hindi","dim":"2D","rating":"5","imageSrc":"/assets/images/lagaan.jpg","city":["chandigarh","bangalore"]},
+    {"name":"Logan","language":"English","dim":"3D","rating":"4","imageSrc":"/assets/images/logan.jpg","city":["chandigarh","bangalore","chennai"]},
+    {"name":"Pirates of the Carribean","language":"English","dim":"3D","rating":"4","imageSrc":"/assets/images/pirates.jpg","city":["chandigarh","bangalore","chennai"]},
+    {"name":"Sabotage","language":"English","dim":"2D","rating":"3","imageSrc":"/assets/images/sabotage.jpg","city":["bangalore"]},
+    {"name":"Shivaay","language":"Telugu","dim":"2D","rating":"1","imageSrc":"/assets/images/shivaay.jpg","city":["chandigarh","chennai"]},
+    {"name":"Avengers","language":"English","dim":"3D","rating":"4","imageSrc":"/assets/images/avengers.jpg","city":["chandigarh","bangalore","chennai"]},
+    {"name":"Geostorm","language":"English","dim":"3D","rating":"3","imageSrc":"/assets/images/geostorm.jpg","city":["chandigarh","bangalore"]}
+
+]

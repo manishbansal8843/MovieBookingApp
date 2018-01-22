@@ -1,0 +1,48 @@
+.header{
+    color:rgb(197, 106, 106);
+    position: relative;
+    height: 60px;
+    width: 100%;
+    background-color: bisque;
+}
+
+.logo-header{
+    list-style: none;
+
+}
+.logo-header li a{
+    list-style: none;
+    font-size: 20px;
+    display: block;
+    bottom: 10px;
+   color: rgb(197, 97, 90);
+   transition: all 1s;
+
+}
+
+.logo-header li.logo a:hover{
+   
+    transform: rotate(360deg) scale(2,2);
+	
+
+
+}
+
+
+
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    background-color: bisque;
+    width: 100%;
+}
+
+.txtpos{
+    position: relative;
+    color: rgb(197, 106, 106);
+    font-size: 16px;
+    text-align:center;
+    padding: 12px 0;
+}

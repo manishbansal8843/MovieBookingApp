@@ -1,0 +1,33 @@
+<div class='container'>
+  
+    <div class='row'>
+      <div class='  col-md-5  '>
+      <div class='panel panel-default'>
+        <div class='panel-heading'>Checkout Details</div>
+        <div class='panel-body'>
+            <div *ngIf='bookingservice.theatre; else mssg;'>
+
+              <div class='row'>Total Amount to be paid {{amount | currency:'INR'}}
+                </div>
+                <br>
+          <div class='row'>
+            Thanks for booking tickets online. Please pay and collect your tickets at BOX OFFICE COUNTER!!
+        </div>
+        <br>
+        <div class='row'>
+         
+               <a [routerLink]="['/movies']">Book More Tickets</a>
+          </div>
+        </div>
+        
+        <ng-template #mssg>
+            <div class='row'>There is nothing to checkout yet. Kindly proceed to main page for bookings.</div>
+            <br>
+            
+            <div class='row'><button class='btn btn-primary mybtn' [routerLink]="['/movies']">Book Tickets</button></div> 
+   
+          </ng-template>
+      </div>
+      </div>
+      </div>
+      </div>

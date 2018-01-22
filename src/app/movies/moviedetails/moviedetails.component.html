@@ -1,0 +1,69 @@
+<div class='container'>
+  
+<div class='row'>
+  <div class='  col-md-5  '>
+  <div class='panel panel-default'>
+    <div class='panel-heading'>Movie Details</div>
+    <div class='panel-body'>
+      <div *ngIf='movie$; else mssg;'>
+      <div class='row'><img [src]='(movie$)?.imageSrc'></div>
+      <div class='row'><strong>Movie Name :  </strong>{{(movie$)?.name}}</div>
+      <div class='row'><strong>Language :  </strong>{{(movie$)?.language}}</div>
+      <div class='row'><strong>Format :  </strong>{{(movie$)?.dim}}</div>
+      <div class='row'><app-rating [rating]='(movie$)?.rating'></app-rating></div>
+    </div>
+    <ng-template #mssg>Kindly select another movie. The movie <strong>{{movieOnLoad?.name}}</strong> is not available in the selected location</ng-template>
+    </div>
+  </div>
+  </div>
+
+  <div class=' col-md-5  '>
+      <div class='panel panel-default'>
+        <div class='panel-heading'>Booking Details</div>
+        <div class='panel-body'>
+          <div class='row'><strong>Select your Theater :  </strong></div>
+          <div *ngFor='let theater of theater$'>
+              <div class='row'><a class='theaterlink' (click)='selectTheater(theater.name)'>{{theater.name}}</a></div>
+
+          </div>
+        <div *ngIf='selectedTheater'>
+            <div class='row'><strong>Theater Selected : </strong>{{selectedTheater.name}}</div>
+            <div class='row ' > <form #thForm='ngForm' class='theaterForm' >
+            <div class='form-group'>
+              <label for='date'><strong>Date</strong></label>
+              <select id='date' class='form-control' required name='date' [(ngModel)]='sTheater.date'>
+                <option *ngFor='let date of selectedTheater.dates' [value]='date'>{{date}}</option>
+              </select>
+            </div>
+            <div class='form-group'>
+                <label for='st'><strong>Show Timings</strong></label>
+                <select id='st' class='form-control' name='st' required [(ngModel)]='sTheater.timing'>
+                  <option *ngFor='let timings of selectedTheater.timings' [value]='timings'>{{timings}}</option>
+                </select>
+              </div>
+              <div class='form-group'>
+                  <label for='seats'><strong>Number of seats(2-10):</strong></label>
+                  <select id='seats' class='form-control' name='seats' required [(ngModel)]='sTheater.seats'>
+                    <option  value='2'>2</option>
+                    <option  value='3'>3</option>
+                    <option  value='4'>4</option>
+                    <option  value='5'>5</option>
+                    <option  value='6'>6</option>
+                    <option  value='7'>7</option>
+                    <option  value='8'>8</option>
+                    <option  value='9'>9</option>
+                    <option  value='10'>10</option>
+
+                  </select>
+                </div>
+                <button class="btn btn-primary" (click)='thformSubmit()' [disabled]='!thForm.valid || !movie$'>Proceed</button>
+          </form></div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      </div>
+</div>
+</div>
