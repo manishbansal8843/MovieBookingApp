@@ -27,6 +27,7 @@ img {
     margin: 10px 10px;  
     width:22%;
     height: 4.5in;
+    overflow:hidden;
 }
 
 .text-strong{

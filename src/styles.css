@@ -9,18 +9,19 @@ html {
     
   }
 
-  .recommended{
+  .recommended1{
       background-color: green;
       color:wheat;
-      position: relative;
-      bottom: 35px;
-      left:20px;
+      position: absolute;
+      bottom: 25px;
+      right:-37px;
       font-size: 15px;
       transform: rotate(-45deg);
-      z-index: 2;
+      padding: 3px 30px;
+     
   }
 
-  .recommended1{
+  .recommended{
     background-color: green;
     color:wheat;
     text-align: center;
